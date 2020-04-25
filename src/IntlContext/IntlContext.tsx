@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Message } from '../types';
+import { Messages } from '../createMessages/createMessages';
 
 interface ContextProps {
   readonly locale: string;
-  readonly messages: Message;
+  readonly messages: Messages;
   readonly setLocale: (locale: string) => void;
 }
 

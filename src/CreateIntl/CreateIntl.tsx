@@ -1,12 +1,13 @@
 import * as React from 'react';
-import { IntlContext } from 'IntlContext/IntlContext';
-import { Message } from '../types';
+import { IntlContext } from '../IntlContext/IntlContext';
+import { Messages } from '../createMessages/createMessages';
 
-export const CreateIntl: React.FC<{ defaultLocale: string; messages: Message }> = ({
-  defaultLocale,
-  messages,
-  children,
-}) => {
+interface Props {
+  defaultLocale: string;
+  messages: Messages;
+}
+
+export const CreateIntl: React.FC<Props> = ({ defaultLocale, messages, children }) => {
   const [locale, setLocale] = React.useState<string>('');
 
   React.useEffect(() => {

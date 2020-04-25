@@ -1,7 +1,9 @@
+import path from 'path';
 import typescript from 'rollup-plugin-typescript2';
 import commonjs from 'rollup-plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 // import postcss from 'rollup-plugin-postcss-modules'
+import alias from 'rollup-plugin-alias';
 import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
 import url from 'rollup-plugin-url';
@@ -36,6 +38,10 @@ export default {
     typescript({
       rollupCommonJSResolveHack: true,
       clean: true,
+    }),
+    alias({
+      resolve: ['.ts'],
+      types: path.resolve(__dirname, './src/types.ts'),
     }),
     commonjs({
       include: 'node_modules/**',

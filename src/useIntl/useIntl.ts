@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { IntlContext } from 'IntlContext/IntlContext';
+import { IntlContext } from '../IntlContext/IntlContext';
+
+import { throwErrorLog } from '../throw';
 
 const replaceParams = (message: string, fromParam: string, toParam: string): string => {
   let $message = `${message}`;
@@ -19,13 +21,13 @@ export const useIntl = () => {
   const t = (key: string, params: { [key: string]: string }): string => {
     if (locale) {
       if (!messages[key] || (messages[key] && Object.keys(messages[key]).length === 0)) {
-        console.error(`Translation '${key}' not found.`);
+        throwErrorLog(`Translation '${key}' not found.`);
 
         return key;
       }
 
       if (messages[key] && !messages[key][locale]) {
-        console.error(`Translation '${key}' for locale '${locale}' not found.`);
+        throwErrorLog(`Translation '${key}' for locale '${locale}' not found.`);
 
         const firstLocale = Object.keys(messages[key])[0];
 
