@@ -62,5 +62,12 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "jest": {
+    "moduleNameMapper": {
+      "CreateIntl/(.*)": "<rootDir>/src/CreateIntl/$1",
+      "IntlContext/(.*)": "<rootDir>/src/IntlContext/$1",
+      "useIntl/(.*)": "<rootDir>/src/useIntl/$1"
+    }
+  }
 }
