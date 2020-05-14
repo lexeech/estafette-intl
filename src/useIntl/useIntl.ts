@@ -18,7 +18,7 @@ const replaceParams = (message: string, fromParam: string, toParam: string): str
 export const useIntl = () => {
   const { locale, messages, setLocale } = React.useContext(IntlContext);
 
-  const t = (key: string, params: { [key: string]: string }): string => {
+  const t = (key: string, params?: { [key: string]: string }): string => {
     if (locale) {
       if (!messages[key] || (messages[key] && Object.keys(messages[key]).length === 0)) {
         throwErrorLog(`Translation '${key}' not found.`);
