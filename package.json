@@ -1,6 +1,6 @@
 {
   "name": "estafette-intl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Estafette Intl helps you localize to many languages your React application.",
   "author": "Vladimir \"lexeech\" Josan <iaskivsky@gmail.com>",
   "maintainers": [
