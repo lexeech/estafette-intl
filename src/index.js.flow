@@ -1,0 +1,22 @@
+import * as React from 'react';
+
+export type Messages = {
+  [key: string]: {
+    [key: string]: string,
+  },
+};
+
+declare export function CreateIntl(props: {
+  defaultLocale: string,
+  messages: Messages,
+}): React.Node;
+
+declare export function createMessages($messages: Messages[]): Messages;
+
+export declare function useIntl(): {
+  t: (key: string, params?: {
+      [key: string]: string;
+  } | undefined) => string;
+  locale: string;
+  setLocale: (locale: string) => void;
+};

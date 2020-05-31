@@ -1,6 +1,6 @@
 {
   "name": "estafette-intl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Estafette Intl helps you localize to many languages your React application.",
   "author": "Vladimir \"lexeech\" Josan <iaskivsky@gmail.com>",
   "maintainers": [
@@ -63,6 +63,7 @@
     "rollup-plugin-alias": "^2.2.0",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-copy-glob": "^0.3.1",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^1.6.2",

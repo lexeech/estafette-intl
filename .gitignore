@@ -1,5 +1,7 @@
 # dependencies
 node_modules
+example/node_modules
+example-flowtype/node_modules
 
 # builds
 build
@@ -19,3 +21,4 @@ yarn-debug.log*
 yarn-error.log*
 yarn.lock
 example/yarn.lock
+example-flowtype/yarn.lock
